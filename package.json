@@ -1,7 +1,7 @@
 {
-  "name": "watson-voice-bot",
+  "name": "bot-demo",
   "version": "1.0.0",
-  "description": "Watson Voice Bot",
+  "description": "bot-demo",
   "main": "index.js",
   "directories": {
     "doc": "doc"
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IBM/watson-voice-bot.git"
+    "url": "git+https://github.com/zhangyan101/bot-demo.git"
   },
   "author": "",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/IBM/watson-voice-bot/issues"
+    "url": "https://github.com/zhangyan101/bot-demo/issues"
   },
-  "homepage": "https://github.com/IBM/watson-voice-bot#readme",
+  "homepage": "https://github.com/zhangyan101/bot-demo#readme",
   "devDependencies": {
     "eslint": "^6.6.0",
     "eslint-config-google": "^0.14.0",

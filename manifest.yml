@@ -14,7 +14,7 @@ applications:
 - path: .
   memory: 128M
   instances: 1
-  name: watson-voice-bot
+  name: watson-voice-bot-20201221092927981
   disk_quota: 512M
   buildpacks:
     - python_buildpack
