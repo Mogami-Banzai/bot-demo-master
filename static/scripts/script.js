@@ -163,7 +163,7 @@ function stopRecording(button) {
       request.send(blob);
     });
 
-  recorder.clear();
+    recorder && recorder.clear();
 }
 
 window.onload = function init() {
@@ -181,7 +181,7 @@ window.onload = function init() {
     alert('No web audio support in this browser!');
   }
 
-  navigator.getUserMedia(
+  navigator.mediaDevices.getUserMedia(
     {
       audio: true
     },
