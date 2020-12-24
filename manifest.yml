@@ -14,7 +14,7 @@ applications:
 - path: .
   memory: 128M
   instances: 1
-  name: pyAppDemo
+  name: watson-voice-assistant
   disk_quota: 512M
   buildpacks:
     - python_buildpack
