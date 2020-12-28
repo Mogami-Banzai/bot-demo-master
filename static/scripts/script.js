@@ -1,5 +1,3 @@
-import Recorder from 'recorder';
-
 let conversationContext = '';
 let recorder;
 let context;
@@ -188,10 +186,10 @@ window.onload = function init() {
     .then(function(stream) {
       const input = context.createMediaStreamSource(stream);
       console.log('Media stream created.');
-      recorder = new Recorder(input);
+      recorder = new Recorder(input);// eslint-disable-line
       console.log('Recorder initialised.');
     })
     .catch(function(err) {
-      console.log(err.name + ": " + err.message);
+      console.log(err.name + ': ' + err.message);
     });
 };
