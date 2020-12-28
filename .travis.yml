@@ -6,6 +6,7 @@ install:
   - pip install -r requirements.txt
   - pip install flake8
   - npm install
+  - npm install babel-preset-es2015 --save-dev
 script:
   - flake8 .
   - ./node_modules/.bin/eslint static/scripts/script.js
