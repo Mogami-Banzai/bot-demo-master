@@ -181,13 +181,28 @@ window.onload = function init() {
     alert('No web audio support in this browser!');
   }
 
-  navigator.mediaDevices.getUserMedia(
-    {
-      audio: true
-    },
-    startUserMedia,
-    function(e) {
-      console.log('No live audio input: ' + e);
-    }
-  );
-};
+//   navigator.mediaDevices.getUserMedia(
+//     {
+//       audio: true
+//     },
+//     startUserMedia,
+//     function(e) {
+//       console.log('No live audio input: ' + e);
+//     }
+//   );
+    navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+    .then(function(stream) {
+        const input = context.createMediaStreamSource(stream);
+        console.log('Media stream created.');
+        // Uncomment if you want the audio to feedback directly
+        // input.connect(audio_context.destination);
+        // console.log('Input connected to audio context destination.');
+
+        // eslint-disable-next-line
+        recorder = new Recorder(input);
+        console.log('Recorder initialised.');
+    })
+    .catch(function(err) {
+        console.log(err.name + ": " + err.message);
+    });
+}
