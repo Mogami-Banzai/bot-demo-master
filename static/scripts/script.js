@@ -1,3 +1,5 @@
+import Recorder from 'recorder';
+
 let conversationContext = '';
 let recorder;
 let context;
@@ -180,16 +182,16 @@ window.onload = function init() {
   } catch (e) {
     alert('No web audio support in this browser!');
   }
-  
+
   navigator.mediaDevices
     .getUserMedia({ audio: true, video: false })
     .then(function(stream) {
-        const input = context.createMediaStreamSource(stream);
-        console.log('Media stream created.');
-        recorder = new Recorder(input);
-        console.log('Recorder initialised.');
+      const input = context.createMediaStreamSource(stream);
+      console.log('Media stream created.');
+      recorder = new Recorder(input);
+      console.log('Recorder initialised.');
     })
     .catch(function(err) {
-        console.log(err.name + ": " + err.message);
+      console.log(err.name + ": " + err.message);
     });
 };
